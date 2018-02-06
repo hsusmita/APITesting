@@ -16,6 +16,7 @@ final class RestaurantListViewModel {
 
 	init() {
 		isExecuting <~ fetchRestaurantsAction.isExecuting
+		restaurantViewModels <~ fetchRestaurantsAction.values.map { $0.list.map { RestaurantViewModel(restaurant: $0) } }
 	}
 
 	func fetchRestaurants() {

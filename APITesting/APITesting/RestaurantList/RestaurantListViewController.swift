@@ -8,6 +8,7 @@
 
 import UIKit
 import ReactiveSwift
+import ReactiveCocoa
 
 class RestaurantListViewController: UIViewController {
 	@IBOutlet var tableView: UITableView!
@@ -16,6 +17,15 @@ class RestaurantListViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.configureTableView()
+		self.reactive.makeBindingTarget { (controller, isExecuting) in
+			UIApplication.shared.isNetworkActivityIndicatorVisible = isExecuting
+		} <~ viewModel.isExecuting
+
+		self.reactive.makeBindingTarget { controller, _  in
+			controller.tableView.reloadData()
+		} <~ viewModel.restaurantViewModels.producer.map { _ in () }
+
+		viewModel.fetchRestaurants()
 	}
 
 	private func configureTableView() {

@@ -36,5 +36,4 @@ class APITestingReactiveTests: XCTestCase {
 		}
 		wait(for: [expectation], timeout: 30.0)
 	}
-    
 }

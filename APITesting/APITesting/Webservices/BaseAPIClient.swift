@@ -53,6 +53,7 @@ class BaseAPIClient {
 				switch result {
 				case .success(let dataResponse):
 					sink.send(value: dataResponse)
+					sink.sendCompleted()
 				case .failure(let error):
 					sink.send(error: AnyError(error))
 				}
