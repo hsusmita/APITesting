@@ -8,6 +8,7 @@ target :APITesting do
 	pod 'Alamofire', '~> 4.0'
 	pod 'ReachabilitySwift', '~> 3'
 	pod 'ReactiveSwift', '~> 3.0'
+	pod 'ReactiveCocoa', '~> 7.0'
 end
 
 target 'APITestingTests' do
