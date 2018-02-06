@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1064A9979F5D62D72652C32C /* Pods_APITesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FBFE6D068BC6632CD629B9 /* Pods_APITesting.framework */; };
+		7838B2F6202991F200F6195C /* APITestingReactiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B2F5202991F200F6195C /* APITestingReactiveTests.swift */; };
 		78A8E2FA20108C1000B462DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E2F920108C1000B462DF /* AppDelegate.swift */; };
 		78A8E2FC20108C1000B462DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E2FB20108C1000B462DF /* ViewController.swift */; };
 		78A8E2FF20108C1000B462DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A8E2FD20108C1000B462DF /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		6B8EE30327D8D194EEBC7484 /* Pods-APITesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-APITesting/Pods-APITesting.release.xcconfig"; sourceTree = "<group>"; };
 		774D616244E65D19F2721796 /* Pods-APITesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APITesting/Pods-APITesting.debug.xcconfig"; sourceTree = "<group>"; };
 		778C191AE7A82EA494BF8BB7 /* Pods_APITestingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APITestingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7838B2F5202991F200F6195C /* APITestingReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestingReactiveTests.swift; sourceTree = "<group>"; };
 		78A8E2F620108C1000B462DF /* APITesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A8E2F920108C1000B462DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A8E2FB20108C1000B462DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				78A8E31120108C1100B462DF /* APITestingTests.swift */,
+				7838B2F5202991F200F6195C /* APITestingReactiveTests.swift */,
 				78A8E31320108C1100B462DF /* Info.plist */,
 			);
 			path = APITestingTests;
@@ -487,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7838B2F6202991F200F6195C /* APITestingReactiveTests.swift in Sources */,
 				78A8E31220108C1100B462DF /* APITestingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

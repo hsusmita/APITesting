@@ -12,7 +12,7 @@ import XCTest
 class APITestingTests: XCTestCase {
 	private let baseAPIClient = BaseAPIClient.shared
 
-    override func setUp() {
+	override func setUp() {
         super.setUp()
     }
 

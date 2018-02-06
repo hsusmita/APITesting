@@ -67,6 +67,12 @@ class BaseAPIClient {
 				print("On Error Log: \(error), request: \(resource.requestRouter.path)")
 		})
 	}
+
+	//MARK: SuggestedRestaurants
+	func fetchSuggestedRestaurants() -> SignalProducer<SuggestedRestaurants, AnyError> {
+		let resource = Resource<SuggestedRestaurants>(requestRouter: RequestRouter.fetchList)
+		return request(resource)
+	}
 }
 
 private extension Request {
