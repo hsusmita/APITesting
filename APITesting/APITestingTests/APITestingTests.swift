@@ -19,7 +19,6 @@ class APITestingTests: XCTestCase {
 	func testFetchRestaurants() {
 		let expectation = XCTestExpectation(description: "Fetch restaurants")
 		let resource = Resource<SuggestedRestaurants>(requestRouter: RequestRouter.fetchList)
-
 		baseAPIClient.request(resource) { (result) in
 			switch result {
 			case .success:

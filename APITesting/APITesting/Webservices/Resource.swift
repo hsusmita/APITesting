@@ -7,28 +7,50 @@
 //
 
 import Foundation
-import Marshal
+//import Marshal
 
 struct Resource<Value> {
 	let requestRouter: RequestRouterProtocol
-	let parse: (JSONObject) throws -> Value
+	let parse: (Data) throws -> Value
 }
 
-extension Resource where Value: Unmarshaling {
+struct Root<Value: Codable>: Codable {
+	enum CodingKeys: String, CodingKey {
+		case response
+	}
+	var value: Value
+
+	init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+		value = try container.decode(Value.self, forKey: .response)
+	}
+
+	func encode(to encoder: Encoder) throws {
+		var container = encoder.container(keyedBy: CodingKeys.self)
+		try container.encode(value, forKey: .response)
+	}
+}
+
+extension Resource where Value: Codable {
 	init(requestRouter: RequestRouterProtocol) {
 		self.init(requestRouter: requestRouter,
-				  parse: { jsonObject in
-					return try jsonObject.value(for: "response")
+				  parse: { data in
+					let decoder = JSONDecoder()
+					let result = try decoder.decode(Root<Value>.self, from: data)
+					return result.value
 		})
 	}
 }
 
-extension Resource where Value: Collection, Value.Element: Unmarshaling {
+extension Resource where Value: Collection, Value.Element: Codable {
 	init(requestRouter: RequestRouterProtocol) {
 		self.init(requestRouter: requestRouter,
-				  parse: { jsonObject in
-					let objects: [Value.Element] = try jsonObject.value(for: "response")
-					return objects as! Value
+				  parse: { data in
+					let decoder = JSONDecoder()
+					let result: [Value.Element] = try decoder.decode(Root<[Value.Element]>.self, from: data).value
+					return result as! Value
 		})
 	}
 }
+
+

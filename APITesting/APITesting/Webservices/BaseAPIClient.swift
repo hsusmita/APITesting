@@ -9,7 +9,8 @@
 import Foundation
 import Alamofire
 import ReachabilitySwift
-import Marshal
+import ReactiveSwift
+import Result
 
 typealias RequestCompletionBlock<T> = (ServiceResult<T>) -> ()
 
@@ -17,33 +18,19 @@ class BaseAPIClient {
 	private var sessionManager = SessionManager()
 	let reachability = Reachability()!
 	static let shared = BaseAPIClient()
+	private let (cancelAllRequests, cancelAllRequestsObserver) = Signal<(), NoError>.pipe()
 
 	func signOut() {
 		sessionManager.session.invalidateAndCancel()
 		sessionManager = SessionManager()
 	}
 
-	@discardableResult func request<Value>(_ resource: Resource<Value>, completionBlock: @escaping RequestCompletionBlock<Value>) -> DataRequest {
-		return request(urlRequest: resource.requestRouter.urlRequest()) { result in
-			switch result {
-			case .success(let dataResponse):
-				do {
-					let value = try resource.parse(dataResponse)
-					completionBlock(ServiceResult.success(value))
-				} catch {
-					let parsingError = error as! MarshalError
-					print(parsingError.description)
-
-					let processedError = ParsingError(error: parsingError)
-					completionBlock(ServiceResult.failure(processedError))
-				}
-			case .failure(let anyError):
-				completionBlock(ServiceResult.failure(anyError))
-			}
-		}
+	@discardableResult func request<Value: Codable>(_ resource: Resource<Value>, completionBlock: @escaping RequestCompletionBlock<Value>) -> DataRequest {
+		let urlRequest = resource.requestRouter.urlRequest()
+		return request(urlRequest: urlRequest, completionBlock: completionBlock)
 	}
 
-  @discardableResult private func request(urlRequest: URLRequestConvertible, completionBlock: @escaping (ServiceResult<JSONObject>) -> ()) -> DataRequest {
+	@discardableResult private func request<Value: Codable>(urlRequest: URLRequestConvertible, completionBlock: @escaping RequestCompletionBlock<Value>) -> DataRequest {
 		return sessionManager.request(urlRequest)
 			.debugLog()
 			.validate(statusCode: 200...299)
@@ -54,10 +41,31 @@ class BaseAPIClient {
 					let processedError = isReachable ? dataResponse.parseError() : InternetError()
 					completionBlock(ServiceResult.failure(processedError))
 				} else {
-					let result = dataResponse.parseData()
+					let result: ServiceResult<Value> = dataResponse.parseData()
 					completionBlock(result)
 				}
 		}
+	}
+
+	func request<Value: Codable>(_ resource: Resource<Value>) -> SignalProducer<Value, AnyError> {
+		return SignalProducer<Value, AnyError> { sink, disposable in
+			let request = self.request(resource, completionBlock: { result in
+				switch result {
+				case .success(let dataResponse):
+					sink.send(value: dataResponse)
+				case .failure(let error):
+					sink.send(error: AnyError(error))
+				}
+ 			})
+			disposable.observeEnded {
+				[weak request] in
+				request?.cancel()
+			}
+		}.observe(on: UIScheduler())
+			.take(until: cancelAllRequests)
+			.on(failed: { error in
+				print("On Error Log: \(error), request: \(resource.requestRouter.path)")
+		})
 	}
 }
 

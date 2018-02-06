@@ -12,33 +12,26 @@ import Marshal
 
 extension DataResponse {
 	func parseError() -> ApplicationError {
-		do {
-			let json = try JSONParser.JSONObjectWithData(data!)
+		let decoder = JSONDecoder()
 			do {
-				print("Got Error from server = \(json.debugDescription))")
-				let errorResponse = try APIError(object: json)
-				return errorResponse
+				let apiError = try decoder.decode(APIError.self, from: self.data!)
+				print("Got Error from server = \(apiError.debugDescription))")
+				return apiError
 			} catch (let error) {
 				print("Error while parsing error: \(error)")
 				return ServerError(message: "Wrong Error Format")
 			}
-		} catch (let error) {
-			print("Error while serializing error: \(error)")
-			return ServerError(message: "Response Serialization Error")
-		}
 	}
 
-	func parseData() -> ServiceResult<JSONObject> {
+	func parseData<Value: Codable>() -> ServiceResult<Value> {
 		do {
-			let object = try JSONParser.JSONObjectWithData(self.data!)
-			print("JSON to parse: \(String(describing: object))")
-			return ServiceResult.success(object)
-
+			let decoder = JSONDecoder()
+			let result = try decoder.decode(Root<Value>.self, from: self.data!).value
+			return ServiceResult.success(result)
 		} catch {
-			if let parsingError = error as? MarshalError {
-				print(parsingError.description)
-			}
-			return ServiceResult.failure(parseError())
+			let error = ParsingError(error: error as! DecodingError)
+			print(error.debugDescription)
+			return ServiceResult.failure(error)
 		}
 	}
 }

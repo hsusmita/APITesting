@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RestaurantStats {
+struct RestaurantStats: Codable {
 	let checkinsCount: Int
 	let usersCount: Int
 	let tipCount: Int

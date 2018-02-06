@@ -7,23 +7,26 @@
 //
 
 import Foundation
-import Marshal
-
-public struct AnyError: Swift.Error {
-	public let baseError: Swift.Error
-
-	public init(_ error: Swift.Error) {
-		if let anyError = error as? AnyError {
-			self = anyError
-		} else {
-			self.baseError = error
-		}
-	}
-}
 
 protocol ApplicationError: LocalizedError {
 	var title: String { get }
 	var debugDescription: String { get }
+}
+
+public struct AnyError: ApplicationError {
+	var title: String {
+		return baseError.title
+	}
+
+	var debugDescription: String {
+		return baseError.debugDescription
+	}
+
+	let baseError: ApplicationError
+
+	init(_ error: ApplicationError) {
+		baseError = error
+	}
 }
 
 struct InternetError: ApplicationError {
@@ -41,9 +44,9 @@ struct InternetError: ApplicationError {
 }
 
 struct ParsingError: ApplicationError {
-	let error: MarshalError
+	let error: DecodingError
 
-	init(error: MarshalError) {
+	init(error: DecodingError) {
 		self.error = error
 	}
 
@@ -52,7 +55,13 @@ struct ParsingError: ApplicationError {
 	}
 
 	var debugDescription: String {
-		return "Parsing Error: \(error.description)"
+		switch self.error {
+		case .valueNotFound(_, let context),
+			 .keyNotFound(_, let context),
+			 .typeMismatch(_, let context),
+			 .dataCorrupted(let context):
+			return "Parsing Error: " + context.debugDescription + "for path: \(context.codingPath)"
+		}
 	}
 
 	var errorDescription: String? {
@@ -80,18 +89,12 @@ struct ServerError: ApplicationError {
 	}
 }
 
-struct APIError: ApplicationError {
+struct APIError: ApplicationError, Codable {
 	var title: String {
 		return "API Error"
 	}
 
 	var debugDescription: String {
 		return "Something went wrong."
-	}
-}
-
-extension APIError: Unmarshaling {
-	init(object: MarshaledObject) throws {
-
 	}
 }
