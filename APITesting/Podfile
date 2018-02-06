@@ -7,7 +7,6 @@ use_frameworks!
 target :APITesting do
 	pod 'Alamofire', '~> 4.0'
 	pod 'ReachabilitySwift', '~> 3'
-	pod 'Marshal', '~> 1.2'
 	pod 'ReactiveSwift', '~> 3.0'
 end
 

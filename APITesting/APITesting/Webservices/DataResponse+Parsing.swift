@@ -8,7 +8,6 @@
 
 import Foundation
 import Alamofire
-import Marshal
 
 extension DataResponse {
 	func parseError() -> ApplicationError {
