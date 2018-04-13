@@ -1,25 +1,33 @@
 PODS:
-  - Alamofire (4.6.0)
+  - Alamofire (4.7.1)
   - ReachabilitySwift (3)
-  - ReactiveCocoa (7.0.1):
-    - ReactiveSwift (~> 3.0)
-  - ReactiveSwift (3.0.0):
+  - ReactiveCocoa (7.2.0):
+    - ReactiveSwift (~> 3.1)
+  - ReactiveSwift (3.1.0):
     - Result (~> 3.2)
   - Result (3.2.4)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
+  - Alamofire
   - ReachabilitySwift (~> 3)
   - ReactiveCocoa (~> 7.0)
   - ReactiveSwift (~> 3.0)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - ReachabilitySwift
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
+
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  ReactiveCocoa: a1b5d502d0d1534f9a72981a485b297b17127f83
-  ReactiveSwift: d9fe0db33c1aaabecb092e8de83cf52875c0de6f
+  ReactiveCocoa: 476dae7ca790f40d30d186a1bd7ebae4290395d5
+  ReactiveSwift: 5b26d2e988fe0eed2daf48c4054d1de74db50184
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
 
-PODFILE CHECKSUM: 7484034e81b2d945e27761ef6ce64f9b7fd2a305
+PODFILE CHECKSUM: feb282690c242f53ff67cdabe19420505990897e
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
