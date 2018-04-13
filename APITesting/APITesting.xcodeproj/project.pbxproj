@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0860190520D86672AA4B7E29 /* Pods_APITestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7821E977207B841600219C5A /* Pods_APITestingTests.framework */; };
 		1064A9979F5D62D72652C32C /* Pods_APITesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FBFE6D068BC6632CD629B9 /* Pods_APITesting.framework */; };
-		7838B2F6202991F200F6195C /* APITestingReactiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B2F5202991F200F6195C /* APITestingReactiveTests.swift */; };
+		27B6AF1E0037277ACAEEA67F /* Pods_APITesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7821E975207B83F000219C5A /* Pods_APITesting.framework */; };
+		5212E255090585B92472A912 /* Pods_APITestingServerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41049A81468F03F83A526E63 /* Pods_APITestingServerTests.framework */; };
 		7838B2F8202993A800F6195C /* RestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B2F7202993A800F6195C /* RestaurantViewModel.swift */; };
 		7838B2FD2029948D00F6195C /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B2FB2029948C00F6195C /* RestaurantTableViewCell.swift */; };
 		7838B2FE2029948D00F6195C /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7838B2FC2029948C00F6195C /* RestaurantTableViewCell.xib */; };
 		7838B300202995DF00F6195C /* RestaurantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7838B2FF202995DF00F6195C /* RestaurantListViewModel.swift */; };
+		786513152074D06800490CF1 /* DummyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513142074D06800490CF1 /* DummyDataProvider.swift */; };
+		786513172074D0A300490CF1 /* Entity+DummyDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513162074D0A300490CF1 /* Entity+DummyDataProvider.swift */; };
+		786513192074D0C900490CF1 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513182074D0C900490CF1 /* BundleExtension.swift */; };
+		7865131B2074D0F900490CF1 /* MockBaseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7865131A2074D0F900490CF1 /* MockBaseAPIClient.swift */; };
+		7865131D2074D12200490CF1 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7865131C2074D12200490CF1 /* Stub.swift */; };
+		7865131F2074D18100490CF1 /* StubbedDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7865131E2074D18100490CF1 /* StubbedDataProvider.swift */; };
+		786513212074D22C00490CF1 /* LabelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513202074D22C00490CF1 /* LabelProvider.swift */; };
+		786513252074D73600490CF1 /* RequestRouter+StubbedDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513242074D73600490CF1 /* RequestRouter+StubbedDataProvider.swift */; };
+		786513272074DE6000490CF1 /* AnyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513262074DE6000490CF1 /* AnyResource.swift */; };
+		786513292074DFC400490CF1 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513282074DFC400490CF1 /* Tracker.swift */; };
+		7865132B2074E09200490CF1 /* Restaurant.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7865132A2074E09200490CF1 /* Restaurant.txt */; };
+		7865133B2074F81800490CF1 /* APITestingServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786513322074E50900490CF1 /* APITestingServerTests.swift */; };
 		78A8E2FA20108C1000B462DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E2F920108C1000B462DF /* AppDelegate.swift */; };
 		78A8E2FC20108C1000B462DF /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E2FB20108C1000B462DF /* RestaurantListViewController.swift */; };
 		78A8E2FF20108C1000B462DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A8E2FD20108C1000B462DF /* Main.storyboard */; };
 		78A8E30220108C1000B462DF /* APITesting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E30020108C1000B462DF /* APITesting.xcdatamodeld */; };
 		78A8E30420108C1000B462DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A8E30320108C1000B462DF /* Assets.xcassets */; };
 		78A8E30720108C1000B462DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78A8E30520108C1000B462DF /* LaunchScreen.storyboard */; };
-		78A8E31220108C1100B462DF /* APITestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E31120108C1100B462DF /* APITestingTests.swift */; };
+		78A8E31220108C1100B462DF /* RestaurantListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E31120108C1100B462DF /* RestaurantListViewModelTests.swift */; };
 		78A8E31D20108C1100B462DF /* APITestingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E31C20108C1100B462DF /* APITestingUITests.swift */; };
 		78A8E33220108F4800B462DF /* RequestRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E32B20108F4800B462DF /* RequestRouterProtocol.swift */; };
 		78A8E33320108F4800B462DF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8E32C20108F4800B462DF /* Error.swift */; };
@@ -37,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		786513352074E50900490CF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78A8E2EE20108C1000B462DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 78A8E2F520108C1000B462DF;
+			remoteInfo = APITesting;
+		};
 		78A8E30E20108C1100B462DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78A8E2EE20108C1000B462DF /* Project object */;
@@ -54,15 +75,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41049A81468F03F83A526E63 /* Pods_APITestingServerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APITestingServerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DDE8CAC11A2484F6B10705 /* Pods-APITestingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITestingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APITestingTests/Pods-APITestingTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B8EE30327D8D194EEBC7484 /* Pods-APITesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-APITesting/Pods-APITesting.release.xcconfig"; sourceTree = "<group>"; };
+		7071B741EAEC482D1311CB39 /* Pods-APITestingServerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITestingServerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-APITestingServerTests/Pods-APITestingServerTests.release.xcconfig"; sourceTree = "<group>"; };
 		774D616244E65D19F2721796 /* Pods-APITesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APITesting/Pods-APITesting.debug.xcconfig"; sourceTree = "<group>"; };
 		778C191AE7A82EA494BF8BB7 /* Pods_APITestingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APITestingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7838B2F5202991F200F6195C /* APITestingReactiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestingReactiveTests.swift; sourceTree = "<group>"; };
+		7821E975207B83F000219C5A /* Pods_APITesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_APITesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7821E977207B841600219C5A /* Pods_APITestingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_APITestingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7838B2F7202993A800F6195C /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
 		7838B2FB2029948C00F6195C /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		7838B2FC2029948C00F6195C /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
 		7838B2FF202995DF00F6195C /* RestaurantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewModel.swift; sourceTree = "<group>"; };
+		786513142074D06800490CF1 /* DummyDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyDataProvider.swift; sourceTree = "<group>"; };
+		786513162074D0A300490CF1 /* Entity+DummyDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entity+DummyDataProvider.swift"; sourceTree = "<group>"; };
+		786513182074D0C900490CF1 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		7865131A2074D0F900490CF1 /* MockBaseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBaseAPIClient.swift; sourceTree = "<group>"; };
+		7865131C2074D12200490CF1 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		7865131E2074D18100490CF1 /* StubbedDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedDataProvider.swift; sourceTree = "<group>"; };
+		786513202074D22C00490CF1 /* LabelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelProvider.swift; sourceTree = "<group>"; };
+		786513242074D73600490CF1 /* RequestRouter+StubbedDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RequestRouter+StubbedDataProvider.swift"; sourceTree = "<group>"; };
+		786513262074DE6000490CF1 /* AnyResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyResource.swift; sourceTree = "<group>"; };
+		786513282074DFC400490CF1 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		7865132A2074E09200490CF1 /* Restaurant.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Restaurant.txt; sourceTree = "<group>"; };
+		786513302074E50900490CF1 /* APITestingServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITestingServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		786513322074E50900490CF1 /* APITestingServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestingServerTests.swift; sourceTree = "<group>"; };
+		786513342074E50900490CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78A8E2F620108C1000B462DF /* APITesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APITesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A8E2F920108C1000B462DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78A8E2FB20108C1000B462DF /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +110,7 @@
 		78A8E30620108C1000B462DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78A8E30820108C1000B462DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78A8E30D20108C1100B462DF /* APITestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78A8E31120108C1100B462DF /* APITestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestingTests.swift; sourceTree = "<group>"; };
+		78A8E31120108C1100B462DF /* RestaurantListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewModelTests.swift; sourceTree = "<group>"; };
 		78A8E31320108C1100B462DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78A8E31820108C1100B462DF /* APITestingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITestingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A8E31C20108C1100B462DF /* APITestingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestingUITests.swift; sourceTree = "<group>"; };
@@ -91,14 +129,24 @@
 		78A8E344201090A600B462DF /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		A1B80A04F734E93E242AE924 /* Pods-APITestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APITestingTests/Pods-APITestingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FBFE6D068BC6632CD629B9 /* Pods_APITesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APITesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5AACC79E23F73E28A93D97B /* Pods-APITestingServerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APITestingServerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APITestingServerTests/Pods-APITestingServerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7865132D2074E50900490CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5212E255090585B92472A912 /* Pods_APITestingServerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78A8E2F320108C1000B462DF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1064A9979F5D62D72652C32C /* Pods_APITesting.framework in Frameworks */,
+				27B6AF1E0037277ACAEEA67F /* Pods_APITesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CCB29CE82464C34E49CE3E0 /* Pods_APITestingTests.framework in Frameworks */,
+				0860190520D86672AA4B7E29 /* Pods_APITestingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +176,8 @@
 				6B8EE30327D8D194EEBC7484 /* Pods-APITesting.release.xcconfig */,
 				A1B80A04F734E93E242AE924 /* Pods-APITestingTests.debug.xcconfig */,
 				46DDE8CAC11A2484F6B10705 /* Pods-APITestingTests.release.xcconfig */,
+				F5AACC79E23F73E28A93D97B /* Pods-APITestingServerTests.debug.xcconfig */,
+				7071B741EAEC482D1311CB39 /* Pods-APITestingServerTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -134,8 +185,11 @@
 		288BD7B24E87C153486854D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7821E977207B841600219C5A /* Pods_APITestingTests.framework */,
+				7821E975207B83F000219C5A /* Pods_APITesting.framework */,
 				D3FBFE6D068BC6632CD629B9 /* Pods_APITesting.framework */,
 				778C191AE7A82EA494BF8BB7 /* Pods_APITestingTests.framework */,
+				41049A81468F03F83A526E63 /* Pods_APITestingServerTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,12 +220,40 @@
 			path = RestaurantList;
 			sourceTree = "<group>";
 		};
+		786513132074D03C00490CF1 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				786513142074D06800490CF1 /* DummyDataProvider.swift */,
+				786513162074D0A300490CF1 /* Entity+DummyDataProvider.swift */,
+				786513182074D0C900490CF1 /* BundleExtension.swift */,
+				7865131A2074D0F900490CF1 /* MockBaseAPIClient.swift */,
+				7865131C2074D12200490CF1 /* Stub.swift */,
+				7865131E2074D18100490CF1 /* StubbedDataProvider.swift */,
+				786513202074D22C00490CF1 /* LabelProvider.swift */,
+				786513242074D73600490CF1 /* RequestRouter+StubbedDataProvider.swift */,
+				786513262074DE6000490CF1 /* AnyResource.swift */,
+				786513282074DFC400490CF1 /* Tracker.swift */,
+				7865132A2074E09200490CF1 /* Restaurant.txt */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		786513312074E50900490CF1 /* APITestingServerTests */ = {
+			isa = PBXGroup;
+			children = (
+				786513322074E50900490CF1 /* APITestingServerTests.swift */,
+				786513342074E50900490CF1 /* Info.plist */,
+			);
+			path = APITestingServerTests;
+			sourceTree = "<group>";
+		};
 		78A8E2ED20108C1000B462DF = {
 			isa = PBXGroup;
 			children = (
 				78A8E2F820108C1000B462DF /* APITesting */,
 				78A8E31020108C1100B462DF /* APITestingTests */,
 				78A8E31B20108C1100B462DF /* APITestingUITests */,
+				786513312074E50900490CF1 /* APITestingServerTests */,
 				78A8E2F720108C1000B462DF /* Products */,
 				0C1435FDFCAF0F8E683BE1A9 /* Pods */,
 				288BD7B24E87C153486854D9 /* Frameworks */,
@@ -184,6 +266,7 @@
 				78A8E2F620108C1000B462DF /* APITesting.app */,
 				78A8E30D20108C1100B462DF /* APITestingTests.xctest */,
 				78A8E31820108C1100B462DF /* APITestingUITests.xctest */,
+				786513302074E50900490CF1 /* APITestingServerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +274,7 @@
 		78A8E2F820108C1000B462DF /* APITesting */ = {
 			isa = PBXGroup;
 			children = (
+				786513132074D03C00490CF1 /* MockData */,
 				78A8E33F201090A600B462DF /* Entities */,
 				78A8E32A20108F4800B462DF /* Webservices */,
 				7838B2FA2029948C00F6195C /* Cells */,
@@ -209,8 +293,7 @@
 		78A8E31020108C1100B462DF /* APITestingTests */ = {
 			isa = PBXGroup;
 			children = (
-				78A8E31120108C1100B462DF /* APITestingTests.swift */,
-				7838B2F5202991F200F6195C /* APITestingReactiveTests.swift */,
+				78A8E31120108C1100B462DF /* RestaurantListViewModelTests.swift */,
 				78A8E31320108C1100B462DF /* Info.plist */,
 			);
 			path = APITestingTests;
@@ -254,6 +337,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7865132F2074E50900490CF1 /* APITestingServerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 786513372074E50900490CF1 /* Build configuration list for PBXNativeTarget "APITestingServerTests" */;
+			buildPhases = (
+				74330D01F1C0A80F6F9A090E /* [CP] Check Pods Manifest.lock */,
+				7865132C2074E50900490CF1 /* Sources */,
+				7865132D2074E50900490CF1 /* Frameworks */,
+				7865132E2074E50900490CF1 /* Resources */,
+				29DBD936128FB60BB36615C2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				786513362074E50900490CF1 /* PBXTargetDependency */,
+			);
+			name = APITestingServerTests;
+			productName = APITestingServerTests;
+			productReference = 786513302074E50900490CF1 /* APITestingServerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		78A8E2F520108C1000B462DF /* APITesting */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78A8E32120108C1100B462DF /* Build configuration list for PBXNativeTarget "APITesting" */;
@@ -263,7 +366,6 @@
 				78A8E2F320108C1000B462DF /* Frameworks */,
 				78A8E2F420108C1000B462DF /* Resources */,
 				7641BCE79F170CAD0298C630 /* [CP] Embed Pods Frameworks */,
-				380D149573BBB8A7A7445102 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,7 +385,6 @@
 				78A8E30A20108C1100B462DF /* Frameworks */,
 				78A8E30B20108C1100B462DF /* Resources */,
 				1B853C15E7B0DF6D6B9342BF /* [CP] Embed Pods Frameworks */,
-				7D1F43E0462FF6D6B2D0E474 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,10 +420,15 @@
 		78A8E2EE20108C1000B462DF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = hsusmita;
 				TargetAttributes = {
+					7865132F2074E50900490CF1 = {
+						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 78A8E2F520108C1000B462DF;
+					};
 					78A8E2F520108C1000B462DF = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
@@ -355,15 +461,24 @@
 				78A8E2F520108C1000B462DF /* APITesting */,
 				78A8E30C20108C1100B462DF /* APITestingTests */,
 				78A8E31720108C1100B462DF /* APITestingUITests */,
+				7865132F2074E50900490CF1 /* APITestingServerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7865132E2074E50900490CF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78A8E2F420108C1000B462DF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7865132B2074E09200490CF1 /* Restaurant.txt in Resources */,
 				7838B2FE2029948D00F6195C /* RestaurantTableViewCell.xib in Resources */,
 				78A8E30720108C1000B462DF /* LaunchScreen.storyboard in Resources */,
 				78A8E30420108C1000B462DF /* Assets.xcassets in Resources */,
@@ -408,19 +523,42 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APITestingTests/Pods-APITestingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		380D149573BBB8A7A7445102 /* [CP] Copy Pods Resources */ = {
+		29DBD936128FB60BB36615C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-APITestingServerTests/Pods-APITestingServerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APITesting/Pods-APITesting-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APITestingServerTests/Pods-APITestingServerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74330D01F1C0A80F6F9A090E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APITestingServerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7641BCE79F170CAD0298C630 /* [CP] Embed Pods Frameworks */ = {
@@ -447,21 +585,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APITesting/Pods-APITesting-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7D1F43E0462FF6D6B2D0E474 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-APITestingTests/Pods-APITestingTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7DC45F3A5C8744AD0A604627 /* [CP] Check Pods Manifest.lock */ = {
@@ -503,11 +626,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7865132C2074E50900490CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7865133B2074F81800490CF1 /* APITestingServerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78A8E2F220108C1000B462DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				78A8E34E201090A600B462DF /* Restaurant.swift in Sources */,
+				786513272074DE6000490CF1 /* AnyResource.swift in Sources */,
+				786513152074D06800490CF1 /* DummyDataProvider.swift in Sources */,
 				78A8E34B201090A600B462DF /* SuggestedRestaurants.swift in Sources */,
 				78A8E34C201090A600B462DF /* RestaurantStats.swift in Sources */,
 				78A8E2FC20108C1000B462DF /* RestaurantListViewController.swift in Sources */,
@@ -516,12 +649,20 @@
 				78A8E2FA20108C1000B462DF /* AppDelegate.swift in Sources */,
 				78A8E33520108F4800B462DF /* BaseAPIClient.swift in Sources */,
 				78A8E33420108F4800B462DF /* ServiceResult.swift in Sources */,
+				7865131F2074D18100490CF1 /* StubbedDataProvider.swift in Sources */,
+				786513172074D0A300490CF1 /* Entity+DummyDataProvider.swift in Sources */,
+				7865131D2074D12200490CF1 /* Stub.swift in Sources */,
 				7838B2F8202993A800F6195C /* RestaurantViewModel.swift in Sources */,
+				786513212074D22C00490CF1 /* LabelProvider.swift in Sources */,
+				786513252074D73600490CF1 /* RequestRouter+StubbedDataProvider.swift in Sources */,
+				7865131B2074D0F900490CF1 /* MockBaseAPIClient.swift in Sources */,
 				78A8E33220108F4800B462DF /* RequestRouterProtocol.swift in Sources */,
 				78A8E33820108F4800B462DF /* RequestRouter.swift in Sources */,
+				786513292074DFC400490CF1 /* Tracker.swift in Sources */,
 				78A8E33720108F4800B462DF /* DataResponse+Parsing.swift in Sources */,
 				7838B300202995DF00F6195C /* RestaurantListViewModel.swift in Sources */,
 				78A8E33320108F4800B462DF /* Error.swift in Sources */,
+				786513192074D0C900490CF1 /* BundleExtension.swift in Sources */,
 				7838B2FD2029948D00F6195C /* RestaurantTableViewCell.swift in Sources */,
 				78A8E30220108C1000B462DF /* APITesting.xcdatamodeld in Sources */,
 				78A8E34D201090A600B462DF /* RestaurantDetail.swift in Sources */,
@@ -532,8 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7838B2F6202991F200F6195C /* APITestingReactiveTests.swift in Sources */,
-				78A8E31220108C1100B462DF /* APITestingTests.swift in Sources */,
+				78A8E31220108C1100B462DF /* RestaurantListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +688,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		786513362074E50900490CF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 78A8E2F520108C1000B462DF /* APITesting */;
+			targetProxy = 786513352074E50900490CF1 /* PBXContainerItemProxy */;
+		};
 		78A8E30F20108C1100B462DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 78A8E2F520108C1000B462DF /* APITesting */;
@@ -580,6 +725,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		786513382074E50900490CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5AACC79E23F73E28A93D97B /* Pods-APITestingServerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = APITestingServerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AshutoF22Labs.APITestingServerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APITesting.app/APITesting";
+			};
+			name = Debug;
+		};
+		786513392074E50900490CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7071B741EAEC482D1311CB39 /* Pods-APITestingServerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = APITestingServerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AshutoF22Labs.APITestingServerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APITesting.app/APITesting";
+			};
+			name = Release;
+		};
 		78A8E31F20108C1100B462DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -594,6 +779,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -601,6 +787,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -651,6 +838,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -658,6 +846,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -790,6 +979,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		786513372074E50900490CF1 /* Build configuration list for PBXNativeTarget "APITestingServerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				786513382074E50900490CF1 /* Debug */,
+				786513392074E50900490CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		78A8E2F120108C1000B462DF /* Build configuration list for PBXProject "APITesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

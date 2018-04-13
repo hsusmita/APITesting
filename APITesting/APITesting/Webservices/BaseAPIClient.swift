@@ -19,6 +19,13 @@ class BaseAPIClient {
 	let reachability = Reachability()!
 	static let shared = BaseAPIClient()
 	private let (cancelAllRequests, cancelAllRequestsObserver) = Signal<(), NoError>.pipe()
+    
+    init() {
+        let configuration = URLSessionConfiguration.default
+        configuration.urlCache = nil
+        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+        sessionManager = SessionManager(configuration: configuration)
+    }
 
 	func signOut() {
 		sessionManager.session.invalidateAndCancel()
@@ -47,15 +54,15 @@ class BaseAPIClient {
 		}
 	}
 
-	func request<Value: Codable>(_ resource: Resource<Value>) -> SignalProducer<Value, AnyError> {
-		return SignalProducer<Value, AnyError> { sink, disposable in
+	func request<Value: Codable>(_ resource: Resource<Value>) -> SignalProducer<Value, AnyApplicationError> {
+		return SignalProducer<Value, AnyApplicationError> { sink, disposable in
 			let request = self.request(resource, completionBlock: { result in
 				switch result {
 				case .success(let dataResponse):
 					sink.send(value: dataResponse)
 					sink.sendCompleted()
 				case .failure(let error):
-					sink.send(error: AnyError(error))
+					sink.send(error: AnyApplicationError(error))
 				}
  			})
 			disposable.observeEnded {
@@ -69,11 +76,11 @@ class BaseAPIClient {
 		})
 	}
 
-	//MARK: SuggestedRestaurants
-	func fetchSuggestedRestaurants() -> SignalProducer<SuggestedRestaurants, AnyError> {
-		let resource = Resource<SuggestedRestaurants>(requestRouter: RequestRouter.fetchList)
-		return request(resource)
-	}
+//    //MARK: SuggestedRestaurants
+//    func fetchSuggestedRestaurants() -> SignalProducer<SuggestedRestaurants, AnyError> {
+//        let resource = Resource<SuggestedRestaurants>(requestRouter: RequestRouter.fetchList)
+//        return request(resource)
+//    }
 }
 
 private extension Request {
@@ -84,4 +91,3 @@ private extension Request {
 		return self
 	}
 }
-

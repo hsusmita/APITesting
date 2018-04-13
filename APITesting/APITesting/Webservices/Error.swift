@@ -13,7 +13,7 @@ protocol ApplicationError: LocalizedError {
 	var debugDescription: String { get }
 }
 
-public struct AnyError: ApplicationError {
+public struct AnyApplicationError: ApplicationError {
 	var title: String {
 		return baseError.title
 	}

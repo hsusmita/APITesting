@@ -35,7 +35,7 @@ enum ActionType {
 	}
 }
 
-protocol RequestRouterProtocol {
+protocol RequestRouterProtocol: LabelProvider {
 	var path: String { get }
 	var baseUrl: String { get }
 	var headers: [String: String] { get }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-//import Marshal
 
 struct Resource<Value> {
 	let requestRouter: RequestRouterProtocol

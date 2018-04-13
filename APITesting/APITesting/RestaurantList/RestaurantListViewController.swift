@@ -12,7 +12,7 @@ import ReactiveCocoa
 
 class RestaurantListViewController: UIViewController {
 	@IBOutlet var tableView: UITableView!
-	private var viewModel = RestaurantListViewModel()
+    private var viewModel = RestaurantListViewModel(baseAPIClient: BaseAPIClient.shared)
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
